@@ -13,6 +13,11 @@ const pageConfig = [
 				key: "B",
 				path: "/first/02",
 			},
+			{
+				name: "画一个点",
+				key: "C",
+				path: "/first/03",
+			},
 		],
 	},
 ];

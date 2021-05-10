@@ -1,1 +1,1 @@
- export default  [{"path":"/first/01","componentPath":"/first/A/index.js","name":"刷底色"},{"path":"/first/02","componentPath":"/first/B/index.js","name":"多姿多彩的画布"}]
+ export default  [{"path":"/first/01","componentPath":"/first/A/index.js","name":"刷底色"},{"path":"/first/02","componentPath":"/first/B/index.js","name":"多姿多彩的画布"},{"path":"/first/03","componentPath":"/first/C/index.js","name":"画一个点"}]

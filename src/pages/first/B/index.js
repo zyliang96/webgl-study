@@ -29,9 +29,19 @@ export default function B(props) {
 		// 实例化Color对象
 		const color = new Color("rgba(255,0,0,1)");
 
+		// clearColor 实际上是设置一个颜色，真正刷的操作是clear执行的
 		gl.clearColor(color.r, color.g, color.b, 1);
 		// 刷底色
 		gl.clear(gl.COLOR_BUFFER_BIT);
+
+		!(function ani(){
+
+			color.offsetHSL(0.005,0,0)
+			gl.clearColor(color.r, color.g, color.b, 1);
+			// 刷底色
+			gl.clear(gl.COLOR_BUFFER_BIT);
+			requestAnimationFrame(ani)
+		})()
 	};
 
 	useEffect(() => {
