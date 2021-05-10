@@ -1,0 +1,54 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Microsoft YaHei;
+}
+
+html,
+body {
+    height: 100%;
+    background: #ffffff;
+}
+
+#root {
+    height: 100%;
+    overflow: hidden;
+
+    .site-page-box {
+        height: 100vh;
+        overflow-x: hidden;
+        background: #fafafa;
+        display: flex;
+        flex-direction: column;
+
+        .index-header {
+            flex: none;
+            height: 60px;
+            width: 100%;
+        }
+
+        .index-layout-box {
+            flex: 1;
+            overflow: auto;
+            width: 100%;
+            display: flex;
+
+            .left-nav {
+                width: 200px;
+                height: 100%;
+            }
+
+            .right-content {
+                flex: 1;
+                height: 100%;
+                background: #f4f6f9;
+                overflow: hidden;
+                /*  overflow-y: scroll;
+              scrollbar-base-color: transparent;
+              scrollbar-darkshadow-color: transparent;
+              scrollbar-highlight-color: transparent;
+              scrollbar-face-color: transparent;*/
+            }
+        }
+    }
+}
