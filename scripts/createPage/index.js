@@ -84,7 +84,8 @@ function creatFile(dir, route) {
 			"utf8"
 		);
 		jsTemplate = jsTemplate
-			.replace(/__functionName/g, titleUpperCase(key))
+			// .replace(/__functionName/g, titleUpperCase(key))
+			.replace(/__functionName/g, 'index')
 			.replace(/__className/g, hyphenate(key));
 		fs.outputFileSync(jsFile, jsTemplate);
 	}

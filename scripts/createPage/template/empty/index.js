@@ -1,6 +1,17 @@
-import React, { useEffect, useState, useRef } from "react";
+/*
+ * @Author: your name
+ * @Date: 2021-05-10 16:19:13
+ * @LastEditTime: 2021-05-12 14:22:39
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \webgl-study\scripts\createPage\template\empty\index.js
+ */
+import React, {useEffect, useState, useRef} from "react";
 import "./index.less";
 import debounce from "lodash/debounce";
+import {initShaders, loadShader, renderPoints, renderPointsIncludeOther,getMouseCoordinate} from '@/utils/webgl.utils.js'
+import { Poly } from "@/utils/Poly/index.js";
+import { Sky } from "@/utils/Sky/index.js";
 
 export default function __functionName(props) {
 	/**
