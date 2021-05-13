@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2021-05-12 13:45:13
- * @LastEditTime: 2021-05-12 16:32:30
+ * @LastEditTime: 2021-05-13 08:20:10
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \webgl-study\src\pages\first\18-鼠标绘制线条\index.js
@@ -93,7 +93,9 @@ export default function index(props) {
                 }
             } else {
                 const { x, y } = getMouseCoordinate(event, canvas);
-                poly.popVertex();
+                if(!isStop){
+                    poly.popVertex();
+                }
                 poly.addVertex(x, y, x, y);
                 gl.clear(gl.COLOR_BUFFER_BIT);
                 poly.draw();
