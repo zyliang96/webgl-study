@@ -117,3 +117,21 @@ export function getMouseCoordinate(event, canvas) {
         y, // y 坐标
     }
 }
+
+/**
+ * webgl坐标系转css坐标系
+ * @param x
+ * @param y
+ * @param width
+ * @param height
+ */
+export function glToCssPos({x, y}, {width, height}) {
+    const [halfWidth, halfHeight] = [
+        width / 2,
+        height / 2
+    ];
+    return {
+        x: x * halfHeight,
+        y: y * halfHeight
+    }
+}

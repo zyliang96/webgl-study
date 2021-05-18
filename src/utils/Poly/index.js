@@ -30,8 +30,8 @@ export class Poly {
 		gl.bindBuffer(gl.ARRAY_BUFFER, this.bufferData);
 		this.updateBuffer();
 		// 设置attribute 变量,得放在初始化之后，要不然拿不到着色器的信息
-		const a_Position = gl.getAttribLocation(gl.program, "a_Position");
-		const a_PointSize = gl.getAttribLocation(gl.program, "a_PointSize");
+		const a_Position = gl.getAttribLocation(gl.program, this.attrName);
+		// const a_PointSize = gl.getAttribLocation(gl.program, this.attrName);
 		/**
 		 * 修改attribute 变量
 		 * @description:  void gl.vertexAttribPointer(index, size, type, normalized, stride, offset); https://developer.mozilla.org/zh-CN/docs/Web/API/WebGLRenderingContext/vertexAttribPointer
@@ -111,9 +111,9 @@ export class Poly {
 	 * 根据模型数据修改点位数据，主要是便于操作
 	 */
 	updateVertices(params) {
-		const { genData } = this;
+		const { geoData } = this;
 		const vertices = [];
-		genData.forEach((data) => {
+		geoData.forEach((data) => {
 			params.forEach((key) => {
 				vertices.push(data[key]);
 			});

@@ -106,6 +106,11 @@ const pageConfig = [
                 key: "19-鼠标绘制多线",
                 path: "/first/19",
             },
+            {
+                name: "狮子座",
+                key: "20-狮子座",
+                path: "/first/20",
+            },
         ],
     },
 ];

@@ -73,7 +73,7 @@ function hyphenate(str) {
 	return str.replace(hyphenateRE, "-$1").toLowerCase();
 }
 
-function creatFile(dir, route) {
+function creatFile(dir, route,index) {
 	const jsFile = path.resolve(dir, "./index.js");
 	const cssFile = path.resolve(dir, "./index.less");
 	const { type = "empty", key } = route;
@@ -85,8 +85,9 @@ function creatFile(dir, route) {
 		);
 		jsTemplate = jsTemplate
 			// .replace(/__functionName/g, titleUpperCase(key))
+			// .replace(/__className/g, hyphenate(key));
 			.replace(/__functionName/g, 'index')
-			.replace(/__className/g, hyphenate(key));
+			.replace(/__className/g, `index-${index}`);
 		fs.outputFileSync(jsFile, jsTemplate);
 	}
 	if (!fs.pathExistsSync(cssFile)) {
@@ -110,12 +111,12 @@ function createPage() {
 	const { filePath, routeConfig } = pageConfigToDir();
 	check(routeConfig);
 	createRouteConfig(routeConfig);
-	filePath.forEach((item) => {
+	filePath.forEach((item,index) => {
 		const currentPath = path.resolve(targetPath, item.filePath);
 		fs.ensureDirSync(currentPath);
 		if (item.path) {
 			// 当前是页面
-			creatFile(currentPath, item);
+			creatFile(currentPath, item,index);
 		}
 	});
 }
