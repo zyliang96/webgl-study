@@ -27,6 +27,7 @@ function pageConfigToDir() {
 				name: item.name,
 				componentPath: "",
 				type: item.type,
+				className: item.className,
 			};
 			if (parent) {
 				if (!parent.path) {
@@ -76,7 +77,7 @@ function hyphenate(str) {
 function creatFile(dir, route,index) {
 	const jsFile = path.resolve(dir, "./index.js");
 	const cssFile = path.resolve(dir, "./index.less");
-	const { type = "empty", key } = route;
+	const { type = "empty", key, className } = route;
 	const templatePath = typeMap[type] ? typeMap[type] : typeMap["empty"];
 	if (!fs.pathExistsSync(jsFile)) {
 		let jsTemplate = fs.readFileSync(
@@ -95,7 +96,7 @@ function creatFile(dir, route,index) {
 			path.resolve(__dirname, templatePath + "/index.less"),
 			"utf8"
 		);
-		cssTemplate = cssTemplate.replace(/__className/g, hyphenate(key));
+		cssTemplate = cssTemplate.replace(/__className/g, className || hyphenate(key));
 		fs.outputFileSync(cssFile, cssTemplate);
 	}
 }

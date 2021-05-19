@@ -111,6 +111,12 @@ const pageConfig = [
                 key: "20-狮子座",
                 path: "/first/20",
             },
+            {
+                name: "图形转面的实现",
+                key: "21-图形转面的实现",
+                path: "/first/21",
+                className:'first-21'
+            },
         ],
     },
 ];
