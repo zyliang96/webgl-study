@@ -8,117 +8,153 @@
  */
 const pageConfig = [
     {
-        name: "入门",
-        key: "first",
+        name: "01-入门",
+        key: "01",
         children: [
             {
                 name: "刷底色",
                 key: "01-刷底色",
-                path: "/first/01",
+                path: "/01/01",
             },
             {
                 name: "多姿多彩的画布",
                 key: "02-多姿多彩的画布",
-                path: "/first/02",
+                path: "/01/02",
             },
             {
                 name: "画一个点",
                 key: "03-画一个点",
-                path: "/first/03",
+                path: "/01/03",
             },
+        ],
+    },
+    {
+        name: "02-js与着色器间的数据传输",
+        key: "02",
+        children: [
             {
                 name: "用js控制一个点",
                 key: "04-用js控制一个点",
-                path: "/first/04",
+                path: "/02/04",
             },
             {
                 name: "用鼠标控制点位",
                 key: "05-用鼠标控制点位",
-                path: "/first/05",
+                path: "/02/05",
             },
             {
                 name: "webgl同步绘图原理",
                 key: "06-webgl同步绘图原理",
-                path: "/first/06",
+                path: "/02/06",
             },
             {
                 name: "鼠标连续绘制点",
                 key: "07-鼠标连续绘制点",
-                path: "/first/07",
+                path: "/02/07",
             },
             {
                 name: "用js控制顶点尺寸",
                 key: "08-用js控制顶点尺寸",
-                path: "/first/08",
+                path: "/02/08",
             },
             {
                 name: "用js修改顶点颜色",
                 key: "09-用js修改顶点颜色",
-                path: "/first/09",
+                path: "/02/09",
             },
             {
                 name: "绘制原点",
                 key: "10-绘制原点",
-                path: "/first/10",
+                path: "/02/10",
             },
             {
                 name: "绘制随机透明度的星星",
                 key: "11-绘制随机透明度的星星",
-                path: "/first/11",
+                path: "/02/11",
             },
             {
                 name: "跳动的星星",
                 key: "12-跳动的星星",
-                path: "/first/12",
+                path: "/02/12",
             },
+        ]
+    },
+    {
+        name: "03-绘制三角形",
+        key: "03",
+        children: [
             {
                 name: "多点绘制",
                 key: "13-多点绘制",
-                path: "/first/13",
+                path: "/03/13",
             },
             {
                 name: "绘制线",
                 key: "14-绘制线",
-                path: "/first/14",
+                path: "/03/14",
             },
             {
                 name: "绘制面",
                 key: "15-绘制面",
-                path: "/first/15",
+                path: "/03/15",
             },
             {
                 name: "绘制矩形面",
                 key: "16-绘制矩形面",
-                path: "/first/16",
+                path: "/03/16",
             },
             {
                 name: "异步绘图",
                 key: "17-异步绘图",
-                path: "/first/17",
+                path: "/03/17",
             },
             {
                 name: "鼠标绘制线条",
                 key: "18-鼠标绘制线条",
-                path: "/first/18",
+                path: "/03/18",
             },
             {
                 name: "鼠标绘制多线",
                 key: "19-鼠标绘制多线",
-                path: "/first/19",
+                path: "/03/19",
             },
             {
                 name: "狮子座",
                 key: "20-狮子座",
-                path: "/first/20",
+                path: "/03/20",
             },
             {
                 name: "mac兼容性问题的坑",
                 key: "22-mac兼容性问题的坑",
-                path: "/first/22",
-                className:'first-22'
+                path: "/03/22",
+                className: 'index-22'
             },
-        ],
+        ]
     },
+    {
+        name: "04-矩阵变换",
+        key: "04",
+        children:[
+            {
+                name: "位移",
+                key: "23-位移",
+                path: "/04/23",
+                className: 'index-23'
+            },
+            {
+                name: "旋转",
+                key: "24-旋转",
+                path: "/04/24",
+                className: 'index-24'
+            },
+            {
+                name: "缩放",
+                key: "25-缩放",
+                path: "/04/25",
+                className: 'index-25'
+            },
+        ]
+    }
 ];
 
 module.exports = pageConfig;
