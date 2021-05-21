@@ -5,9 +5,12 @@ const defAttr = () => {
 		geoData: [],
 		size: 2,
 		attrName: "a_Position",
+		isPointName: "u_IsPOINTS",
 		count: 0,
 		types: ["POINTS"],
 		isInit: false,
+		circleDot: false,
+		u_IsPOINTS: null,
 	};
 };
 
@@ -20,7 +23,7 @@ export class Poly {
 	 * 初始化
 	 */
 	init() {
-		const { gl, size, count } = this;
+		const { gl, size, count, circleDot } = this;
 		if (!gl) return;
 		// 缓冲对象 不会被异步调用清空
 		if (!this.bufferData) {
@@ -42,6 +45,11 @@ export class Poly {
 		// gl.vertexAttribPointer(a_PointSize, 1, gl.FLOAT, false, 32, 2);
 		// 赋能-批处理
 		gl.enableVertexAttribArray(a_Position);
+
+		// 如果是圆点，就获取一下uniform 变量
+		if (circleDot) {
+			this.u_IsPOINTS = gl.getUniformLocation(gl.program, this.isPointName);
+		}
 	}
 
 	/**
@@ -127,8 +135,9 @@ export class Poly {
 	 * @param {*} types
 	 */
 	draw(types = this.types) {
-		const { gl, count, vertices } = this;
+		const { gl, count, vertices, circleDot, u_IsPOINTS } = this;
 		for (let type of types) {
+			circleDot && gl.uniform1f(u_IsPOINTS, type === "POINTS");
 			gl.drawArrays(gl[type], 0, count);
 		}
 	}

@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2021-05-10 16:19:13
- * @LastEditTime: 2021-05-12 20:05:19
+ * @LastEditTime: 2021-05-20 23:59:28
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \webgl-study\src\pageConfig.js
@@ -112,10 +112,10 @@ const pageConfig = [
                 path: "/first/20",
             },
             {
-                name: "图形转面的实现",
-                key: "21-图形转面的实现",
-                path: "/first/21",
-                className:'first-21'
+                name: "mac兼容性问题的坑",
+                key: "22-mac兼容性问题的坑",
+                path: "/first/22",
+                className:'first-22'
             },
         ],
     },

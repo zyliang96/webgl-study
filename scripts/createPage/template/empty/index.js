@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2021-05-10 16:19:13
- * @LastEditTime: 2021-05-12 14:22:39
+ * @LastEditTime: 2021-05-20 23:25:00
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \webgl-study\scripts\createPage\template\empty\index.js
@@ -23,6 +23,7 @@ import {Poly} from "@/utils/Poly/index.js";
 import {Sky} from "@/utils/Sky/index.js";
 import {Compose} from "@/utils/Tweening/Compose.js";
 import {Track} from "@/utils/Tweening/Track.js";
+import { ShapeGeo } from "@/utils/ShapeGeo/index.js";
 
 export default function __functionName(props) {
     /**
