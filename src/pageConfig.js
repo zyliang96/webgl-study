@@ -153,6 +153,36 @@ const pageConfig = [
                 path: "/04/25",
                 className: 'index-25'
             },
+            {
+                name: "二维矩阵",
+                key: "26-二维矩阵",
+                path: "/04/26",
+                className: 'index-26'
+            },
+            {
+                name: "四维矩阵",
+                key: "27-四维矩阵",
+                path: "/04/27",
+                className: 'index-27'
+            },
+            {
+                name: "矩阵平移",
+                key: "28-矩阵平移",
+                path: "/04/28",
+                className: 'index-28'
+            },
+            {
+                name: "矩阵缩放",
+                key: "29-矩阵缩放",
+                path: "/04/29",
+                className: 'index-29'
+            },
+            {
+                name: "矩阵库",
+                key: "30-矩阵库",
+                path: "/04/30",
+                className: 'index-30'
+            },
         ]
     }
 ];
